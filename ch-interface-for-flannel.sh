@@ -9,4 +9,4 @@ INTERFACE=${INTERFACE##*' '}
 SED=/etc/systemd/system/flanneld.service.sed
 SVC=/etc/systemd/system/flanneld.service
 yes | cp $SED $SVC
-sed -i s?""?""?g $SVC 
+sed -i s?"{{.interface}}"?"${INTERFACE}"?g $SVC 
