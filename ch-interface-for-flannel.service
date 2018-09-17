@@ -1,0 +1,9 @@
+[Unit]
+Description=Change interface information for Flannel
+
+[Service]
+Type=oneshot
+ExecStart=sleep 60 && /home/docker/ch-insterface.sh
+
+[Install]
+WantedBy=multi-user.target
